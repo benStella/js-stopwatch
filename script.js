@@ -1,8 +1,11 @@
 let timerElem = $('#timer');
+let startBtn = $('#start-btn');
+let stopBtn = $('#stop-btn');   
+let resetBtn = $('#reset-btn');
 
 function Timer() {
-    let seconds = 55;
-    let minutes = 59; 
+    let seconds = 1; // Default value is 1
+    let minutes = 0; 
     let hours = 0;
 
     let secInterval = setInterval(function() {
@@ -23,5 +26,17 @@ function Timer() {
                 hours++;
         }
     }, 1000); 
+
+    $('#stop-btn').click(function() {
+        clearInterval(secInterval);
+    });
+
+    $('#reset-btn').click(function() {
+        clearInterval(secInterval);
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+        timerElem.text('0:0.0');
+    });
 }
 $('#start-btn').click(Timer);

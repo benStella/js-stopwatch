@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}       
+
+#timer {
+    display: flex;
+    justify-content: center;
+    margin: 3vw;
+    padding: auto;
+    font-size: 10vw;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ 
+#btns{
+    display: flex;
+    justify-content: center;
+    margin: 3%;
+}
+
+#start-btn, #stop-btn, #reset-btn {
+    padding: 10%;
+    margin: 10%;
+    width: 100%;
+    height: 100%;
+}
+
